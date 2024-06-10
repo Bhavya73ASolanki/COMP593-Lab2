@@ -13,9 +13,9 @@ def main():
     return
 
     # TODO: Step 3 - Add another movie to the data structure
-    student_info["movies"].append({"title": "interstellar","genre": "drama"})
+    student_info["movies"].append({"title": "Sholay","genre": "action"})
 
-    
+
 # TODO: Step 4 - Function that prints student name and ID	
 def print_student_name_and_id(data):
     full_name = data["full_name"]
@@ -46,8 +46,21 @@ def print_movie_genres(data):
     return 
 
 # TODO: Step 8 - Function that prints comma-separated list of movie titles
-def print_movie_titles(movie_list):
+def print_movie_titles(movies):
+    titles = [movie["title"].title() for movie in movies]
+    title_str = ", ".join(titles)
+    print(f"Some of my favourite movies are {title_str}!")
     return
+
+print_student_name_and_id(student_info)
+print_pizza_toppings(student_info)
+
+new_toppings = ("cucumber", "chilli paper")
+add_pizza_toppings(student_info, new_toppings)
     
+print_pizza_toppings(student_info)
+print_movie_genres(student_info)
+print_movie_titles(student_info["movies"])
+
 if __name__ == '__main__':
     main()
