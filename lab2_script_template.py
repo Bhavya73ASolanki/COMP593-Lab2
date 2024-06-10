@@ -1,7 +1,7 @@
 def main():
 
     # TODO: Step 2 - Create a complex data structure
-    My_Information = {
+    Student_info = {
         "full_name": "Bhavykumar Solanki",
         "student_id": "10333607",
         "pizza_toppings": ["ONIONS", "BLACK OLIVES", "PINEAPLE"],
@@ -10,12 +10,19 @@ def main():
             {"title":"ms dhoni - the untold story", "gerne":"biopic"}
         ]
     }
-
+    return
 
     # TODO: Step 3 - Add another movie to the data structure
+    student_info["movies"].append({"title": "interstellar","genre": "drama"})
+
     
 # TODO: Step 4 - Function that prints student name and ID	
-def print_student_name_and_id(about_me):
+def print_student_name_and_id(data):
+    full_name = data["full_name"]
+    first_name = full_name.split()[0]
+    student_id = data["student_id"]
+    print(f"My name is {full_name}, but you can call me Sir {first_name}.")
+    print(f"My student ID is {student_id}.")
     return
     
 # TODO: Step 5 - Function that adds pizza toppings to data structure
